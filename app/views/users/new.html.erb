@@ -1,12 +1,27 @@
-<%= form_with scope: :user, local: true do |form| %>
+<%= form_with scope: :user, url: users_path, local: true do |form| %>
   <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
+    <%= form.label :First_Name %><br>
+    <%= form.text_field :string %>
+  </p>
+
+  <p>
+    <%= form.label :Last_Name %><br>
+    <%= form.text_field :string %>
+  </p>
+
+  <p>
+    <%= form.label :DOB %><br>
+    <%= form.text_field :date %>
   </p>
  
   <p>
-    <%= form.label :text %><br>
+    <%= form.label :Address %><br>
     <%= form.text_area :text %>
+  </p>
+
+  <p>
+    <%= form.label :phone %><br>
+    <%= form.text_area :string %>
   </p>
  
   <p>
