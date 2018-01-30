@@ -2,6 +2,9 @@ class UsersController < ApplicationController
 	def new
 	end
 	def create
-		render plain: params[:user].inspect
-	end
+        @user = User.new(params[:user])
+
+        @user.save
+        redirect_to@user
+    end
 end
